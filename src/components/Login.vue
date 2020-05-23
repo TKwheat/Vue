@@ -66,7 +66,7 @@ export default {
         const { data: result } = await this.$http.post('login', this.loginform)
         if (result.meta.status !== 200) { return this.$message.error('登录失败！') }
         this.$message.success('登录成功！')
-        console.log(result)
+        // console.log(result)
         // 将登录token保存到sessionStorage中以验证登录状态
         window.sessionStorage.setItem('token', result.data.token)
         // 登录后跳转到后台主页
